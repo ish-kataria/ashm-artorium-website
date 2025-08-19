@@ -14,7 +14,6 @@ export default function Navigation() {
     { href: "/shop", label: "View Art" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
-    { href: "/admin/artwork", label: "Admin" },
   ];
 
   return (
