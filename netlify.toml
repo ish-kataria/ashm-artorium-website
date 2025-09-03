@@ -1,0 +1,18 @@
+[images]
+  remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*"]
+
+[build]
+  command = "NEXT_SKIP_LINT=true NEXT_SKIP_TYPE_CHECK=true npm run build"
+  publish = "out"
+
+[build.environment]
+  NEXT_SKIP_LINT = "true"
+  NEXT_SKIP_TYPE_CHECK = "true"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
